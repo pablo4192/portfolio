@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./index.js"></script>
+    <title>Pablo Estanguet - Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="contenedorHeader">
+            <nav>
+                <a href="#main-2">1. sobre mí</a>
+                <a href="#main-3">2. proyectos</a>
+                <p id="consola">3. abrir consola</p> <!--Poner flechita para indicar que abran la consola-->
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="main-1">
+                <div class="descripcion">
+                    <img src="./assets/pabloCvFondoGris.png" alt="imgPerfil">
+                    <div id="textoDescripcion">
+                        <p>Pablo Estanguet</p>
+                        <p>Full-Stack Developer</p>
+                        <p>
+                            Bienvenido|a. <br>
+                            Desde aquí tendras acceso a mis proyectos, curriculum y mas información personal. 
+                        </p>
+                        <div class="links">
+                            <div>
+                                <img src="./assets/gmail.png" alt="gmail">
+                                <a href="https://mail.google.com/" target="_blank">estanguet570@gmail.com</a>
+                            </div>
+                            <div>
+                                <img src="./assets/linkedin-original.svg" alt="linkedin">
+                                <a href="https://www.linkedin.com/in/pablo-estanguet/" target="_blank">linkedin</a>
+                            </div>
+                            <div>
+                                <img src="./assets/github-original.svg" alt="gitHub" style="background-color: #eee; border-radius: 3px;">
+                                <a href="https://github.com/pablo4192" target="_blank">gitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="terminal"> <!--Hacerlo despeglable-->
+                    <div>
+                        <p>Menu</p> 
+                        <input type="button" value="X" id="cerrarConsola">
+                    </div>
+                    <div class="opciones">
+                        <p>C:/Users/portfolio-estanguet: <span>_</span></p> <!--Tiene que titilar el guion bajo y destacar que elija una opción-->
+                        <div id="opcion1">
+                            <a href="./assets/cv/Pablo-Estanguet-cv.pdf" download="estanguet_cv">Descargar Cv</a>
+                        </div>
+                        <div id="opcion2">
+                            Ver codigo fuente de esta pagina
+                        </div>
+                        <div id="opcion3">
+                            Pronostico del tiempo
+                        </div>
+                    </div>    
+                </div>
+                <dialog id="modal">
+                    <div class="inputsClima">
+                        <label for="ciudad">Ingrese ciudad: </label><input type="text" placeholder="Nombre ciudad" name="ciudad">
+                        <small style="margin-left: 10px;">Si es necesario indique region o pais solo deje un espacio, sin guiones ni caracteres especiales. para busquedas internacionales ingrese el nombre en ingles</small> 
+                    </div>
+                    <div class="consultaClima">
+                        <input type="button" value="Consultar clima">
+                        <small id="error">Error en los parametros de busqueda. Ingrese localidad y ciudad.</small>
+                    </div>
+                    <div class="respuestaApi" id="respuesta">
+                        <div></div>
+                        <div>
+                            <div id="datosClima"></div>
+                        </div>
+                    </div>
+                    <div class="cerrarModal">
+                        <input type="button" value="Cerrar">
+                    </div>
+                </dialog>
+            </div>
+        </section>
+        <div id="senialador">
+            <p>swipe</p> 
+            <img src="./assets/swipe.png" alt="swipe">
+        </div>
+        <section>
+            <div class="main-2" id="main-2">
+                <div id="imgMain2">
+                <img src="./assets/fondo1.jpg" alt="fondo1">
+                </div>
+                <div id="presentacion">
+                    <h2>Sobre mi</h2>
+                    <div id="sobreMi">
+                        <p>
+                           Cursando ultimas materias de: Tecnicatura Superior en Programación en UTN-Avellaneda. <br>
+                           Me motiva el aprendizaje de nuevas habilidades que puedan ser implementadas para la resolución de problemas. <br>  
+                        </p>
+                    </div>
+                    <div class="tecnologias">
+                        <h3>Tecnologias y Herramientas utilizadas</h3>
+                        <div id="front-end-framework">
+                            <img src="./assets/iconosTecnologias/javascript-original.svg" alt="javaScript">
+                            <img src="./assets/iconosTecnologias/typescript-original.svg" alt="typeScript">
+                            <img src="./assets/iconosTecnologias/angularjs-original.svg" alt="angular">
+                            <img src="./assets/iconosTecnologias/html5-original.svg" alt="html">
+                            <img src="./assets/iconosTecnologias/css3-original.svg" alt="css">
+                            <img src="./assets/iconosTecnologias/bootstrap-original.svg" alt="bootstrap">
+                        </div>
+                        <div id="back-end">
+                            <img src="./assets/iconosTecnologias/php-original.svg" alt="php">
+                            <img src="./assets/iconosTecnologias/c-original.svg" alt="c">
+                            <img src="./assets/iconosTecnologias/csharp-original.svg" alt="c#">
+                        </div>
+                        <div id="dbs">
+                            <img src="./assets/iconosTecnologias/mysql-original-wordmark.svg" alt="mySql" style="background-color: rgba(255,255,255,.8); border-radius: 10px;">
+                            <img src="./assets/iconosTecnologias/microsoftsqlserver-plain-wordmark.svg" alt="sqlServer" style="background-color: rgba(255,255,255,.8); border-radius: 10px;">
+                            <img src="./assets/iconosTecnologias/firebase-plain-wordmark.svg" alt="firebase">
+                        </div>
+                        <div id="herramientas">
+                            <img src="./assets/iconosTecnologias/git-original.svg" alt="git">
+                            <img src="./assets/iconosTecnologias/postman-icon-svgrepo-com.svg" alt="postman">
+                            <img src="./assets/iconosTecnologias/vscode-original-wordmark.svg" alt="vsCode">
+                            <img src="./assets/iconosTecnologias/visualstudio-plain.svg" alt="vsStudio">
+                        </div>
+                    </div>
+            
+                </div> 
+            </div>
+        </section>
+        <section>
+            <div class="main-3" id="main-3"> 
+                <h2>Proyectos</h2>
+                <div id="underline"></div>
+                <div class="contenedorProyectos">
+                    <div class="proyectoPrincipal">
+                        <a href="https://sala-de-juegos-c1619.web.app/home" target="_blank">
+                            <div id="salaDeJuegos" class="divProyecto">
+                                <p>
+                                    Web app con login y registro de usuarios, juegos y chat. Uso de base de datos no relacional 
+                                    para el registro de la información relacionada con la app. <br>
+                                    Tecnologias: JavaScript, TypeScript, Angular, Html, Css, Bootstrap, Firebase.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="gitHubSalaDeJuegos">
+                        <div>
+                            <a href="https://github.com/pablo4192/EjerciciosLaboIV/tree/master/tp1_SalaDeJuegos/src/app" target="_blank">
+                                Codigo proyecto sala de juegos
+                            </a>
+                        </div>
+                    </div>
+                    <div class="proyectos">
+                        <a href="https://github.com/pablo4192/tp2_comanda_EstanguetPablo" target="_blank">
+                            <div id="proyecto1" class="divProyecto">
+                                <p>
+                                    Api creada segun requerimientos de un restaurant, transferencia de datos por protocolo Http.
+                                    Comunicación con base de datos, middlewares, controllers, subida de archivos, descarga de informes csv - pdf. <br>
+                                    Tecnologias: Php, Slim Framework, MySql, Postman.
+                                </p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/pablo4192/tps_laboratorio_ii/tree/master/Tp4/Estanguet.Pablo.2E.TPFinal" target="_blank">
+                            <div id="proyecto2" class="divProyecto"> 
+                                <p>
+                                    Aplicación con abm, informes y filtrado de datos segun diversos criterios de un simulacro de censo.
+                                    Descarga de los informes en formatos csv, json, xml. Se utilizaron todos los aspectos principales de OOP. 
+                                    Implementación de Unit Testing. <br>
+                                    Tecnologias: C#, Microsoft Sql Server, Interfaz Windows Form.
+                                </p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/pablo4192/EjerciciosGuia_Programacion2" target="_blank">
+                            <div id="proyecto3" class="divProyecto">
+                                <p>
+                                    Ejercicios de la guia de estudios del segundo cuatrimestre de Tecnicatura Superior en Programación en UTN-Avellaneda.
+                                    Enfocado en logica y Programación orientada a objetos.
+                                    Tecnologias: C#
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+    </main>
+    <footer>
+        Footer
+    </footer>
+
+</body>
+</html>
