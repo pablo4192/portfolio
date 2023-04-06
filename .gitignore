@@ -1,2 +1,6 @@
-#ignorar multimedia
+#ignorar
 assets
+.firebase
+404.html
+.firebaserc
+firebase.json
