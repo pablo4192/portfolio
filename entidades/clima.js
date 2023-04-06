@@ -29,6 +29,8 @@ export class Clima{
         let despejado = ['sunny', 'clear'];
         let nublado = ['overcast', 'cloudy'];
         let lluvia = ['rain', 'showers', 'storm'];
+        let neblina = 'mist';
+        let nieve = 'snow';
 
         if(condicion.toLowerCase().includes(despejado[0]) || condicion.toLowerCase().includes(despejado[1])){
             return 'Soleado';
@@ -39,6 +41,13 @@ export class Clima{
         else if(condicion.toLowerCase().includes(lluvia[0]) || condicion.toLowerCase().includes(lluvia[1]) || condicion.toLowerCase().includes(lluvia[2])){
             return 'Lluvioso';
         }
+        else if(condicion.toLowerCase().includes(neblina)){
+            return 'Neblina';
+        }
+        else if(condicion.toLowerCase().includes(nieve)){
+            return 'Nieve';
+        }
+        
         return 'Indefinido';
     }
 

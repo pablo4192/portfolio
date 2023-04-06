@@ -12,9 +12,10 @@
     <header>
         <div class="contenedorHeader">
             <nav>
-                <a href="#main-2">1. sobre mí</a>
-                <a href="#main-3">2. proyectos</a>
-                <p id="consola">3. abrir consola</p> <!--Poner flechita para indicar que abran la consola-->
+                <a href="#main-2" class="ancla">1. sobre mí</a>
+                <a href="#main-3" class="ancla">2. proyectos</a>
+                <p id="consola">3. abrir consola</p>
+                <img src="./assets/pointer.png" alt="pointer.png" id="pointer">
             </nav>
         </div>
     </header>
@@ -46,19 +47,19 @@
                         </div>
                     </div>
                 </div>
-                <div id="terminal"> <!--Hacerlo despeglable-->
-                    <div>
+                <div id="terminal"> 
+                    <div id="headerTerminal">
                         <p>Menu</p> 
                         <input type="button" value="X" id="cerrarConsola">
                     </div>
                     <div class="opciones">
-                        <p>C:/Users/portfolio-estanguet: <span>_</span></p> <!--Tiene que titilar el guion bajo y destacar que elija una opción-->
+                        <p>C:/Users/portfolio-estanguet: <span>_</span></p>
                         <div id="opcion1">
                             <a href="./assets/cv/Pablo-Estanguet-cv.pdf" download="estanguet_cv">Descargar Cv</a>
                         </div>
-                        <div id="opcion2">
+                        <a href="https://github.com/pablo4192/portfolio" target="_blank"><div id="opcion2">
                             Ver codigo fuente de esta pagina
-                        </div>
+                        </div></a>
                         <div id="opcion3">
                             Pronostico del tiempo
                         </div>
@@ -67,11 +68,11 @@
                 <dialog id="modal">
                     <div class="inputsClima">
                         <label for="ciudad">Ingrese ciudad: </label><input type="text" placeholder="Nombre ciudad" name="ciudad">
-                        <small style="margin-left: 10px;">Si es necesario indique region o pais solo deje un espacio, sin guiones ni caracteres especiales. para busquedas internacionales ingrese el nombre en ingles</small> 
+                        <small style="margin-left: 10px;">Si es necesario indique region o pais, solo deje un espacio sin guiones ni caracteres especiales.</small> 
                     </div>
                     <div class="consultaClima">
                         <input type="button" value="Consultar clima">
-                        <small id="error">Error en los parametros de busqueda. Ingrese localidad y ciudad.</small>
+                        <small id="error">Error en los parametros de busqueda. Ingrese ciudad, para busquedas internacionales ingrese nombre en ingles</small>
                     </div>
                     <div class="respuestaApi" id="respuesta">
                         <div></div>
@@ -188,12 +189,10 @@
                     </div>
                 </div>
             </div>
-            
         </section>
-
     </main>
     <footer>
-        Footer
+        Gracias por la visita!
     </footer>
 
 </body>

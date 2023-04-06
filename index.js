@@ -13,9 +13,11 @@ const error_ref = document.getElementById('error');
 const abrirConsola = () => {
     const a_ref = document.getElementById('consola');
     const terminal_ref = document.getElementById('terminal');
+    const pointer_ref = document.getElementById('pointer');
 
     a_ref.addEventListener('click', () => {
         terminal_ref.style.display = 'block';
+        pointer_ref.style.display = 'none';
     });
 }
 
@@ -31,9 +33,22 @@ const cerrarConsola = () => {
 
 const aplicarFx = () => {
     const underline_ref = document.getElementById('underline');
-    const imgPresentacion_ref = document.getElementById('imgMain2');
     const presentacion_ref = document.getElementById('presentacion');
-    const opcionesTerm_ref = document.getElementsByClassName('opciones');
+    const anclas_ref = document.getElementsByClassName('ancla');
+    const main2_ref = document.getElementById('main-2');
+    const main3_ref = document.getElementById('main-3')
+
+    for(let i = 0; i < anclas_ref.length; i++){
+        anclas_ref[i].addEventListener('click', (e) => {
+            e.preventDefault();
+
+            if(i == 0)
+            main2_ref.scrollIntoView({block: "start", behavior: "smooth"});
+            else
+            main3_ref.scrollIntoView({block: "start", behavior: "smooth"});
+
+        });
+    }
     
     window.addEventListener('scroll', () => {
         let top = underline_ref.getBoundingClientRect().top;
@@ -41,10 +56,10 @@ const aplicarFx = () => {
         if(top < 700){
             underline_ref.style.width = '90%';
         }
-        else if(top < 1400){
-            imgPresentacion_ref.style.opacity = '1';
+        else if(top < 1500){
             presentacion_ref.style.opacity = '1';
             presentacion_ref.style.transform = 'translate(0)';
+            
         }
     });
 }
@@ -194,6 +209,14 @@ function cambiarImg(objClima){
                 img.setAttribute('src', './assets/clima/lluvia.png');
                 img.setAttribute('alt', 'lluvia.png');
                     break;
+                    case 'Neblina':
+                        img.setAttribute('src', './assets/clima/nublado.png');
+                        img.setAttribute('alt', 'neblina.png');
+                        break;
+                        case 'Nieve':
+                            img.setAttribute('src', './assets/clima/nieve.png');
+                            img.setAttribute('alt', 'nieve.png');
+                            break;
     }
 
     divImg.appendChild(img);
@@ -205,14 +228,3 @@ function eliminarNodosHijos(nodo){
         nodoHijo = nodo.removeChild(nodo.firstElementChild);
     }
 }
-
-
-//Agregar efectos y estio al modal del clima
-//Realizar la opcion 2 de la consola (que puede ser??)
-//Agregar enlace al codigo del portfolio (opcion 2??)
-
-//Cambiar el estio de scroll al escoger seccion de la pagina (behavior..?)
-//Footer poner algo...
-
-
-
