@@ -13,6 +13,7 @@
 
 .contenedorHeader{
     height: 15vh;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -51,7 +52,7 @@ nav>a:hover, nav>p:hover{
 
 .main-1{
     height: 100vh;
-
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -381,6 +382,7 @@ nav>a:hover, nav>p:hover{
 
 .main-2{
     height: 100vh;
+    width: 100vw;
     background: rgb(10,0,0);
     position: relative;
     display: flex;
@@ -414,7 +416,7 @@ nav>a:hover, nav>p:hover{
 
 #presentacion{
     width: 50%;
-    height: 60vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -476,6 +478,7 @@ nav>a:hover, nav>p:hover{
 
 .main-3{
     height: 90vh;
+    
     background: linear-gradient(to bottom, rgb(10,0,0) 20%, rgb(40,40,40));
     display: flex;
     flex-direction: column;
@@ -584,7 +587,7 @@ nav>a:hover, nav>p:hover{
 
 #gitHubSalaDeJuegos{
     width: 100%;
-    height: 70px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -718,6 +721,75 @@ footer{
     }
     40%{
         transform: translate(0);
+    }
+}
+
+/*Responsive*/
+
+@media (max-width: 1250px){
+    .descripcion{
+        width: 100%;
+       
+    }
+
+    .descripcion>img{
+        width: 200px;
+        height: 200px;
+    }
+    
+    #textoDescripcion p{
+        font-size: .9rem;
+        margin-bottom: 4px;
+    }
+
+    #textoDescripcion p:first-child{
+    font-size: 1.5rem;
+    }
+
+    #textoDescripcion p:nth-child(2){
+        font-size: 1rem;
+    }
+
+    .main-3{
+        height: 180vh;
+        
+        
+    }
+
+    .contenedorProyectos{
+        height: 100%;
+       
+    }
+
+    .proyectos{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70%;
+       
+    }
+
+    #salaDeJuegos, #proyecto1, #proyecto2, #proyecto3{
+        width: 500px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 992px){
+    
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 576px){
+        
+    .descripcion>img{
+        position: absolute;
+        right: 0;
+        width: 150px;
+        height: 150px;
     }
 }
 
