@@ -61,18 +61,22 @@
                             Ver codigo fuente de esta pagina
                         </div></a>
                         <div id="opcion3">
-                            Pronostico del tiempo
+                            Clima Hoy
                         </div>
                     </div>    
                 </div>
                 <dialog id="modal">
                     <div class="inputsClima">
-                        <label for="ciudad">Ingrese ciudad: </label><input type="text" placeholder="Nombre ciudad" name="ciudad">
-                        <small style="margin-left: 10px;">Si es necesario indique region o pais, solo deje un espacio sin guiones ni caracteres especiales.</small> 
+                        <div>
+                            <label for="ciudad">Ingrese ciudad: </label><input type="text" placeholder="Nombre ciudad" name="ciudad">
+                        </div>
+                        <div>
+                            <small style="margin-left: 10px;">Si es necesario indique region o pais, sin espacios ni guiones.</small> 
+                        </div>
                     </div>
                     <div class="consultaClima">
                         <input type="button" value="Consultar clima">
-                        <small id="error">Error en los parametros de busqueda. Ingrese ciudad, para busquedas internacionales ingrese nombre en ingles</small>
+                        <small id="error">Error! Ingrese ciudad, para busquedas internacionales ingrese nombre en ingles</small>
                     </div>
                     <div class="respuestaApi" id="respuesta">
                         <div></div>

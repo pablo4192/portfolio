@@ -98,8 +98,6 @@ const abrirModalClima = () => {
     });
 
     consultar_ref.addEventListener('click', () => {
-        
-
         if(validarInputsClima(ciudad_ref.value)){
             error_ref.style.visibility = 'hidden';
             consultarClima(ciudad_ref.value);
@@ -108,6 +106,20 @@ const abrirModalClima = () => {
             error_ref.style.visibility = 'visible';
         }        
     });
+
+    ciudad_ref.addEventListener('keyup', (e) => {
+        if(e.key == 'Enter'){
+            if(validarInputsClima(ciudad_ref.value)){
+                error_ref.style.visibility = 'hidden';
+                consultarClima(ciudad_ref.value);
+            }
+            else{
+                error_ref.style.visibility = 'visible';
+            }  
+        }
+    });
+
+    
     
 }
 
