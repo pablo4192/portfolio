@@ -880,13 +880,8 @@ footer{
         width: 95%;
     }
 
-    #salaDeJuegos::after, #proyecto1::after, #proyecto2::after, #proyecto3::after{
-        width: 0;
-    }
+    
 
-    #salaDeJuegos::before, #proyecto1::before, #proyecto2::before, #proyecto3::before{
-        width: 0;
-    }
 }
 
 @media (max-width: 576px){
@@ -909,8 +904,11 @@ footer{
     }
 
     #salaDeJuegos, #proyecto1, #proyecto2, #proyecto3{
-        width: 100%;
-        border: 2px solid #fff;
+        width: 100%;    
+    }
+
+    .proyectoPrincipal a, .proyectos a{
+        width: 95%;
     }
 
     .proyectoPrincipal{
